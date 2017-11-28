@@ -1,0 +1,6 @@
+
+<label for="basic-url">{{config.textLable}}</label>
+<div class="form-group"  >
+  <span class=" input-group-addon" ng-hide="config.LeftAddon"><span class="glyphicon glyphicon-search"></span></span>
+      <input type="text" class="form-control"  ng-class="config.additionalInputClass" ng-model="config.value" placeholder="Custom template" uib-typeahead="list as list.docName for list in config.lists | filter:{docName:$viewValue}" typeahead-template-url="customTemplate.html"  typeahead-show-hint="true" typeahead-min-length="0">
+ </div>

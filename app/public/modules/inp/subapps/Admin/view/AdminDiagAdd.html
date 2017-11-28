@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">{{oAdminDiagAddController.header}}
+             <small>{{oAdminDiagAddController.secondryHeader}}</small>
+         </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+	<page-alert config="oAdminDiagAddController.info"></page-alert>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-8 col-md-6">
+    <dropdown-tag config="oAdminDiagAddController.selectDept" changed="oAdminDiagAddController.deptDropChange()"></dropdown-tag>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-6">
+    <input-box config="oAdminDiagAddController.diagTxtName" changed="oAdminDiagAddController.diagTxtChange()"></input-box>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-6">
+    <static-control key="'Diagnosis Name'">{{oAdminDiagAddController.FinalDiagName}}</static-control>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-6">
+    <input-box config="oAdminDiagAddController.patientRate"></input-box>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-6">
+    <input-box config="oAdminDiagAddController.insentiveLimited"></input-box>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-6">
+    <input-box config="oAdminDiagAddController.Limit"></input-box>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-6">
+    <input-box config="oAdminDiagAddController.insentiveNormal"></input-box>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-6">
+    <input-box config="oAdminDiagAddController.insentiveStaf"></input-box>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-3 col-md-3">
+    <button-tag config="oAdminDiagAddController.submit" clickfun='oAdminDiagAddController.Submit()'></button-tag>
+  </div>
+  <div class="col-xs-12 col-sm-3 col-md-3">
+    <button-tag config="oAdminDiagAddController.back" clickfun='oAdminDiagAddController.Back()'></button-tag>
+  </div>
+  <div class="col-xs-12 col-sm-3 col-md-3">
+    <button-tag config="oAdminDiagAddController.reset" clickfun='oAdminDiagAddController.Reset()'></button-tag>
+  </div>
+</div>

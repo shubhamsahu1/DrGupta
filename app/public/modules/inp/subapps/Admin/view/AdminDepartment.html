@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">{{oAdminDepartmentController.header}}
+             <small>{{oAdminDepartmentController.secondryHeader}}</small>
+         </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <uib-accordion close-others="oAdminDepartmentController.oneAtATime">
+
+      <div uib-accordion-group ng-repeat="dept in oAdminDepartmentController.depts" class="panel-info" is-open="dept.open">
+        <uib-accordion-heading>
+          <div class="row">
+            <div class="col-xs-8 col-sm-8 col-md-8">
+              <b>{{dept.deptName}}</b>
+              
+            </div>
+            
+            <div class="col-xs-4 col-sm-4 col-md-4">
+              <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': dept.open, 'glyphicon-chevron-right': !dept.open}"></i>
+            </div>
+          </div>
+        </uib-accordion-heading>
+        <div class="row">
+          <div class="col-xs-12 col-sm-7 col-md-7">
+          <div class="row" ng-show="dept.edit">
+          	<div class="col-xs-12 col-sm-12 col-md-12">
+          		  <input-box config="dept.deptTxtName"></input-box>
+          	</div>
+          </div>
+          <div class="row" ng-show="dept.edit">
+          	<div class="col-xs-12 col-sm-12 col-md-12">
+          		  <input-box config="dept.deptTxtID"></input-box>
+          	</div>
+          </div>
+          <div class="row">
+          	<div class="col-xs-12 col-sm-12 col-md-12" ng-hide="dept.edit">
+          		   <static-control key="'Department ID:'">{{dept.deptID}}</static-control>
+          	</div>
+          </div>
+           
+          
+          </div>
+          <div class="col-xs-12 col-sm-5 col-md-5">
+            <button-tag  ng-hide="dept.edit" config="oAdminDepartmentController.edit" clickfun="oAdminDepartmentController.editDepartment(dept.deptID)"><span class="glyphicon glyphicon-pencil"></span></button-tag>
+            <button-tag  ng-show="dept.edit" config="oAdminDepartmentController.editDone" clickfun="oAdminDepartmentController.editDoneDepartment(dept.deptID)"><span class="glyphicon glyphicon-pencil"></span></button-tag>
+            <button-tag  config="oAdminDepartmentController.delete" clickfun="oAdminDepartmentController.deleteDepartment(dept.deptID)"></button-tag>
+         
+          </div>
+        </div>
+      </div>
+    </uib-accordion>
+   </div>
+   <div class="col-xs-12 col-sm-12 col-md-12">
+   	<button-tag config="oAdminDepartmentController.addDept" clickfun="oAdminDepartmentController.addDepartment()"><span class="glyphicon glyphicon-plus"></span></button-tag>
+   </div>
+</div>
+ 

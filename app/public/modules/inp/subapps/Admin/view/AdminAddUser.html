@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">{{oAdminAddUserController.header}}
+             <small>{{oAdminAddUserController.secondryHeader}}</small>
+         </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+	<page-alert config="oAdminAddUserController.info"></page-alert>
+  </div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-8 col-md-6">
+		<input-box config="oAdminAddUserController.userName"></input-box>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-6 col-md-6">
+		<dropdown-tag config="oAdminAddUserController.selectRole" changed="oAdminAddUserController.roleDropChange()"></dropdown-tag>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6" ng-show='oAdminAddUserController.showDepartment'>
+		<dropdown-tag config="oAdminAddUserController.selectDept"></dropdown-tag>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-8 col-md-6">
+		<input-box config="oAdminAddUserController.emailID"></input-box>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-8 col-md-6">
+		<input-box config="oAdminAddUserController.mobile"></input-box>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-8 col-md-6">
+		<input-box config="oAdminAddUserController.password"></input-box>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-8 col-md-6">
+		<input-box config="oAdminAddUserController.ConfPassword"></input-box>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-8 col-md-6">
+		<dropdown-tag config="oAdminAddUserController.selectOption"></dropdown-tag>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-8 col-md-6">
+		<input-box config="oAdminAddUserController.answar"></input-box>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-8 col-md-3">
+		<button-tag config="oAdminAddUserController.Submit" clickfun="oAdminAddUserController.submitFun()"></button-tag>
+	</div>
+</div>

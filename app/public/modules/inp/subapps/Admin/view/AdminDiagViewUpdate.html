@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">{{oAdminDiagViewUpdateController.header}}
+             <small>{{oAdminDiagViewUpdateController.secondryHeader}}</small>
+         </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+	<page-alert config="oAdminDiagViewUpdateController.info"></page-alert>
+  </div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-6 col-md-6">
+		<dropdown-tag config="oAdminDiagViewUpdateController.selectDept" changed="oAdminDiagViewUpdateController.deptDropChange()"></dropdown-tag>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6">
+		<dropdown-tag config="oAdminDiagViewUpdateController.selectDiag" changed="oAdminDiagViewUpdateController.diagDropChange()"></dropdown-tag>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-6 col-md-6">
+		<static-control ng-hide="oAdminDiagViewUpdateController.edited" key="'Diagnosis Name'">{{oAdminDiagViewUpdateController.selectedDiag.diagName}}</static-control>
+		<input-box ng-show="oAdminDiagViewUpdateController.edited" config="oAdminDiagViewUpdateController.diagTxtName" ></input-box>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-6 col-md-6">
+		<static-control ng-hide="oAdminDiagViewUpdateController.edited" key="'Patient Rate'">{{oAdminDiagViewUpdateController.selectedDiag.patientRate}}</static-control>
+		<input-box ng-show="oAdminDiagViewUpdateController.edited" config="oAdminDiagViewUpdateController.patientRate"></input-box>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-6 col-md-6">
+		<static-control ng-hide="oAdminDiagViewUpdateController.edited" key="'Insentive Normal'">{{oAdminDiagViewUpdateController.selectedDiag.insDoctor}}</static-control>
+		<input-box ng-show="oAdminDiagViewUpdateController.edited" config="oAdminDiagViewUpdateController.insentiveNormal"></input-box>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-6 col-md-6">
+		<static-control ng-hide="oAdminDiagViewUpdateController.edited" key="'Insentive Limit'">{{oAdminDiagViewUpdateController.selectedDiag.insDocLimited}}</static-control>
+		<input-box ng-show="oAdminDiagViewUpdateController.edited" config="oAdminDiagViewUpdateController.insentiveLimited"></input-box>
+		
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6">
+		<static-control ng-hide="oAdminDiagViewUpdateController.edited" key="'Insentive Limit No'">{{oAdminDiagViewUpdateController.selectedDiag.setLimit}}</static-control>
+		<input-box ng-show="oAdminDiagViewUpdateController.edited" config="oAdminDiagViewUpdateController.Limit"></input-box>
+		
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-6 col-md-6">
+		<static-control ng-hide="oAdminDiagViewUpdateController.edited" key="'Insentive Staf'">{{oAdminDiagViewUpdateController.selectedDiag.insStaf}}</static-control>
+		<input-box ng-show="oAdminDiagViewUpdateController.edited" config="oAdminDiagViewUpdateController.insentiveStaf"></input-box>
+	</div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-3 col-md-3">
+   <button-tag ng-hide="oAdminDiagViewUpdateController.edited"  config="oAdminDiagViewUpdateController.edit" clickfun="oAdminDiagViewUpdateController.editDiag()"><span class="glyphicon glyphicon-pencil"></span></button-tag>
+   <button-tag ng-show="oAdminDiagViewUpdateController.edited"  config="oAdminDiagViewUpdateController.editDone" clickfun="oAdminDiagViewUpdateController.editDoneDiag()"><span class="glyphicon glyphicon-ok"></span></button-tag>
+  </div>
+  <div class="col-xs-12 col-sm-4 col-md-4">
+    <button-tag config="oAdminDiagViewUpdateController.delete" clickfun='oAdminDiagViewUpdateController.Delete()'></button-tag>
+  </div>
+  
+</div>

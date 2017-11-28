@@ -1,0 +1,7 @@
+<label for="basic-url">{{config.textLable}}</label>
+<div class="form-group" ng-class="{'has-error':config.hasError}"  >
+  
+  <textarea row="4" cols="50" placeholder="{{config.placeholder}}" class="form-control" ng-class="config.additionalInputClass" ng-model="config.value" validation-control cn=config ng-model-options="{ updateOn: 'blur' }"></textarea>
+  
+  <div class="alert alert-danger" ng-show="config.hasError" ng-repeat="msg in config.errorMessagePosition">{{msg}}</div>
+</div>

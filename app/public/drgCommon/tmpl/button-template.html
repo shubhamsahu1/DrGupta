@@ -1,0 +1,5 @@
+
+<button ng-if="config.type == 'button'" type="button" ng-class="config.additionalCLass" ng-click="config.clicked?config.clicked():clickfun()" class="btn"><ng-transclude></ng-transclude>{{config.buttonText}}</button>
+
+
+<a ng-if="config.type == 'link'" ng-class="config.additionalCLass"  ng-click="config.clicked?config.clicked():clickfun()" class="btn"><ng-transclude></ng-transclude>{{config.buttonText}}</a>

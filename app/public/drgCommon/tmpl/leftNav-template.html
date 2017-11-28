@@ -1,0 +1,5 @@
+<ul class="nav nav-pills nav-stacked">
+
+		  <li role="presentation" ng-repeat="item in config.list" ng-click="clicked(item)" ng-class="{active:item.active}"><a ui-sref='{{item.toState}}' >{{item.value}}</a></li>
+		
+</ul>

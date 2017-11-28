@@ -1,0 +1,8 @@
+
+<label for="basic-url">{{config.textLable}}</label>
+<div class="form-group" ng-class="{'has-error':config.hasError}"  >
+  <span class=" input-group-addon" ng-hide="config.LeftAddon==null">{{config.LeftAddon}}</span>
+  <input type="{{config.type}}" placeholder="{{config.placeholder}}" class="form-control" ng-class="config.additionalInputClass" ng-change="changed()" ng-model="config.value" validation-control cn=config ng-model-options="{ updateOn: 'blur' }" aria-label="config.ariaLable">
+  <span class="input-group input-group-addon" ng-hide="config.rightAddon==null">{{config.rightAddon}}</span>
+  <div class="alert alert-danger" ng-show="config.hasError" ng-repeat="msg in config.errorMessagePosition">{{msg}}</div>
+</div>

@@ -1,0 +1,12 @@
+ <div class="thumbnail">
+      <!-- <img ng-if=config.imgSrc src="{{config.imgSrc}}" alt="{{config.alt}}"> -->
+      <div class="caption">
+        <h3>{{config.header}}</h3>
+        <p>{{config.pargraph}}</p>
+        <p>
+        <button-tag ng-repeat="button in config.buttons" config="button"></button-tag>
+        
+        
+        </p>
+      </div>
+    </div>

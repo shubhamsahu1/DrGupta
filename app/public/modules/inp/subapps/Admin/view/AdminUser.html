@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">{{oAdminUserController.header}}
+             <small>{{oAdminUserController.secondryHeader}}</small>
+         </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+	<page-alert config="oAdminUserController.info"></page-alert>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <uib-accordion close-others="oAdminUserController.oneAtATime">
+
+      <div uib-accordion-group ng-repeat="user in oAdminUserController.Users" class="panel-info" is-open="user.open">
+        <uib-accordion-heading>
+          <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4">
+              <b>{{user.userName}}</b>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4">
+              <span class="pull-right">Mobile:<b>{{user.userMobile}}</b></span>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4">
+              <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': user.open, 'glyphicon-chevron-right': !user.open}"></i>
+            </div>
+          </div>
+        </uib-accordion-heading>
+        <div class="row">
+          <div class="col-xs-12 col-sm-9 col-md-8">
+            <static-control key="'Role:'">{{user.userRole}}</static-control>
+            <static-control key="'Department:'" ng-show='user.userDept'>{{user.userDept}}</static-control>
+            <static-control key="'Email address:'">{{user.userEmail}}</static-control>
+           </div>
+          <div class="col-xs-12 col-sm-3 col-md-4">
+            <button-tag class="pull-right" config="oAdminUserController.delete" clickfun="oAdminUserController.ProceedToDeleteUser(user._id)"></button-tag>
+          </div>
+        </div>
+      </div>
+    </uib-accordion>
+   </div>
+   <div class="col-xs-12 col-sm-12 col-md-12">
+   	<button-tag config="oAdminUserController.addUser"><span class="glyphicon glyphicon-plus"></span></button-tag>
+   </div>
+</div>
+ 
