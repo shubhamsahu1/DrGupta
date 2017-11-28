@@ -1,0 +1,6 @@
+<div class="form-group">
+<label for="basic-url">{{config.textLabel}}</label>
+<select ng-class="config.additionalCLass" ng-model="config.value" ng-change="changed()">
+  <option ng-repeat="option in config.options" value={{option.key}}>{{option.value}}</option>
+</select>
+</div>

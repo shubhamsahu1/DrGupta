@@ -1,0 +1,39 @@
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+	<page-alert config="oLoginSigninController.info"></page-alert>
+  </div>
+</div>
+	<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+		<form role="form">
+			<fieldset>
+				<h2>{{oLoginSigninController.content.LoginHeader}}</h2>
+				<hr class="colorgraph">
+
+				<input-box config="oLoginSigninController.userName"></input-box>
+				<input-box config="oLoginSigninController.password"></input-box>
+				<span class="button-checkbox">
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-6">
+						<dropdown-tag config="oLoginSigninController.selectRole"></dropdown-tag>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6">
+						
+					</div>
+					</div>
+					</span>
+				
+				<hr class="colorgraph">
+				
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-6">
+          			<button-tag config="oLoginSigninController.loginButton"></button-tag>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6">
+          			<button-tag config="oLoginSigninController.forgotPwd"></button-tag>
+					</div>
+						
+				</div>
+			</fieldset>
+		</form>
+	</div>

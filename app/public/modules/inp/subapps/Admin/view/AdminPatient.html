@@ -1,0 +1,12 @@
+<div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">{{oAdminPatientController.header}}
+                    <small>{{oAdminPatientController.secondryHeader}}</small>
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+           <div class="col-md-6" ng-repeat="thumbNail in oAdminPatientController.thumbNailData">
+               	<thumb-nail  config="thumbNail"></thumb-nail>
+            </div>
+        </div>
